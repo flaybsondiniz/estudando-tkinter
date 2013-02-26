@@ -1,0 +1,27 @@
+import tkinter
+from tkinter import *
+
+
+app = tkinter.Tk()
+novo = StringVar('')
+
+frame = tkinter.Frame(app, relief=RIDGE, borderwidth=2)
+frame.pack(fill=BOTH,expand=1)
+
+msg =''
+texto=('Testando')
+
+def trocar_texto(texto):
+    texto = novo
+    return novo
+
+label = tkinter.Label(app, text=texto)
+label.pack()
+
+button = tkinter.Button(app,text = 'click',command = trocar_texto(novo))
+button.pack()
+
+sair = tkinter.Button(app,text = 'Sair',command =app.destroy)
+sair.pack(side=BOTTOM)
+
+app.mainloop()
